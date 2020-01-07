@@ -1,5 +1,5 @@
 //пароль
-let password = "qwerty1234567890";
+let password = "QuZ731Qda131";
 //список имен
 let firstNameArray = [
 "Anderey", "Andryha", "Andry",
@@ -64,18 +64,20 @@ function initial(firstNameArray, lastNameArray, pass){
 let firstName = firstNameArray[getRandomInt(0, firstNameArray.length-1)];
 let lastName = lastNameArray[getRandomInt(0, lastNameArray.length-1)];
 let email = firstName + lastName + getRandomInt(191054314, 191054999); 
-getData(firstName, lastName, email, pass);
+setData(firstName, lastName, email, pass);
 }
 
-function getData(firstName, lastName, email, pass){
-console.log(firstName + " " + lastName + " " + email + " " + pass);
+function setData(firstName, lastName, email, pass){
 var inputArray = document.querySelectorAll('input');
 inputArray[1].value = firstName;
 inputArray[2].value = lastName;
 inputArray[11].value = email;
 inputArray[13].value = pass;
-inputArray[13].click();
+inputArray[13].focus();
 inputArray[14].value = pass;
+var text = 'Логин: ' + email + ' Пароль: ' + pass;
+
+console.log(text);
 }
 
 function getRandomInt(min, max) {
