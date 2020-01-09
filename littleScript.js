@@ -63,7 +63,7 @@ initial(firstNameArray,lastNameArray, password);
 function initial(firstNameArray, lastNameArray, pass){
 let firstName = firstNameArray[getRandomInt(0, firstNameArray.length-1)];
 let lastName = lastNameArray[getRandomInt(0, lastNameArray.length-1)];
-let email = firstName + lastName + getRandomInt(191054314, 191054999); 
+let email = firstName + lastName + getRandomInt(3333, 9999); 
 setData(firstName, lastName, email, pass);
 }
 
@@ -73,9 +73,8 @@ inputArray[1].value = firstName;
 inputArray[2].value = lastName;
 inputArray[11].value = email;
 inputArray[13].value = pass;
-inputArray[13].focus();
 inputArray[14].value = pass;
-var text = 'Логин: ' + email + ' Пароль: ' + pass;
+var text = 'Логин: ' + email + '@mail.ru' + ' Пароль: ' + pass;
 
 console.log(text);
 }
